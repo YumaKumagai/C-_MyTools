@@ -1,6 +1,6 @@
 #pragma once
 #define _USE_MATH_DEFINES
-#include <cmath>
+#include <math.h>
 
 template<class T>class Coord2
 {
@@ -147,4 +147,4 @@ Coord2<T> operator/(const Coord2<T>& a, const Coord2<T>& b)
 using Int2 = Coord2<int>;
 using Float2 = Coord2<float>;
 using Vector2 = Coord2<float>;
-using Double2 = Coord2<double>
+using Double2 = Coord2<double>;
