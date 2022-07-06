@@ -15,6 +15,11 @@ public:
 
 	Coord2(const Coord2& c2) :x(c2.x), y(c2.y) {}
 
+	static Coord2 Square(T xy)
+	{
+		return { xy,xy };
+	}
+
 	template<class U>Coord2<U> Cast()const
 	{
 		return { static_cast<U>(x),static_cast<U>(y) };
@@ -103,43 +108,43 @@ public:
 };
 
 template<class T>
-Coord2<T> operator+(const Coord2<T>& a, const Coord2<T>& b)
+inline Coord2<T> operator+(const Coord2<T>& a, const Coord2<T>& b)
 {
 	return { a.x + b.x,a.y + b.y };
 }
 
 template<class T>
-Coord2<T> operator-(const Coord2<T>& a, const Coord2<T>& b)
+inline Coord2<T> operator-(const Coord2<T>& a, const Coord2<T>& b)
 {
 	return a + (-b);
 }
 
 template<class T>
-Coord2<T> operator*(const Coord2<T>& a, T t)
+inline Coord2<T> operator*(const Coord2<T>& a, T t)
 {
 	return { a.x * t,a.y * t };
 }
 
 template<class T>
-Coord2<T> operator*(T t, const Coord2<T>& a)
+inline Coord2<T> operator*(T t, const Coord2<T>& a)
 {
 	return a * t;
 }
 
 template<class T>
-Coord2<T> operator*(const Coord2<T>& a, const Coord2<T>& b)
+inline Coord2<T> operator*(const Coord2<T>& a, const Coord2<T>& b)
 {
 	return { a.x * b.x,a.y * b.y };
 }
 
 template<class T>
-Coord2<T> operator/(const Coord2<T>& a, T t)
+inline Coord2<T> operator/(const Coord2<T>& a, T t)
 {
 	return { a.x / t,a.y / t };
 }
 
 template<class T>
-Coord2<T> operator/(const Coord2<T>& a, const Coord2<T>& b)
+inline Coord2<T> operator/(const Coord2<T>& a, const Coord2<T>& b)
 {
 	return { a.x / b.x,a.y / b.y };
 }

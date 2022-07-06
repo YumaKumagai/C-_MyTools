@@ -94,43 +94,43 @@ public:
 };
 
 template<class T>
-Coord3<T> operator+(const Coord3<T>& a, const Coord3<T>& b)
+inline Coord3<T> operator+(const Coord3<T>& a, const Coord3<T>& b)
 {
 	return { a.x + b.x,a.y + b.y,a.z + b.z };
 }
 
 template<class T>
-Coord3<T> operator-(const Coord3<T>& a, const Coord3<T>& b)
+inline Coord3<T> operator-(const Coord3<T>& a, const Coord3<T>& b)
 {
 	return a + (-b);
 }
 
 template<class T>
-Coord3<T> operator*(const Coord3<T>& a, T t)
+inline Coord3<T> operator*(const Coord3<T>& a, T t)
 {
 	return { a.x * t,a.y * t,a.z * t };
 }
 
 template<class T>
-Coord3<T> operator*(T t, const Coord3<T>& a)
+inline Coord3<T> operator*(T t, const Coord3<T>& a)
 {
 	return a * t;
 }
 
 template<class T>
-Coord3<T> operator*(const Coord3<T>& a, const Coord3<T>& b)
+inline Coord3<T> operator*(const Coord3<T>& a, const Coord3<T>& b)
 {
-	reuturn{ a.x * b.x,a.y * b.y,a.z * b.z };
+	return { a.x * b.x,a.y * b.y,a.z * b.z };
 }
 
 template<class T>
-Coord3<T> operator/(const Coord3<T>& a, T t)
+inline Coord3<T> operator/(const Coord3<T>& a, T t)
 {
 	return { a.x / t,a.y / t,a.z / t };
 }
 
 template<class T>
-Coord3<T> operator/(const Coord3<T>& a, const Coord3<T>& b)
+inline Coord3<T> operator/(const Coord3<T>& a, const Coord3<T>& b)
 {
 	return { a.x / b.x,a.y / b.y,a.z / b.z };
 }

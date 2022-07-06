@@ -22,7 +22,7 @@ public:
 		return {
 			static_cast<U>(x),static_cast<U>(y),
 			static_cast<U>(z),static_cast<U>(w)
-		}
+		};
 	}
 
 	Coord4 operator+()const
@@ -34,7 +34,7 @@ public:
 	{
 		return {
 			-x,-y,-z,-w
-		}
+		};
 	}
 
 	Coord4& operator+=(const Coord4& c4)
@@ -76,55 +76,55 @@ public:
 };
 
 template<class T>
-Coord4<T> operator+(const Coord4<T>& a, const Coord4<T>& b)
+inline Coord4<T> operator+(const Coord4<T>& a, const Coord4<T>& b)
 {
 	return {
 		a.x + b.x,a.y + b.y,a.z + b.z,a.w + b.w
-	}
+	};
 }
 
 template<class T>
-Coord4<T> operator-(const Coord4<T>& a, const Coord4<T>& b)
+inline Coord4<T> operator-(const Coord4<T>& a, const Coord4<T>& b)
 {
 	return a + (-b);
 }
 
 template<class T>
-Coord4<T> operator*(const Coord4<T>& a, T t)
+inline Coord4<T> operator*(const Coord4<T>& a, T t)
 {
 	return {
 		a.x * t,a.y * t,a.z * t,a.w * t
-	}
+	};
 }
 
 template<class T>
-Coord4<T> operator*(T t, const Coord4<T>& a)
+inline Coord4<T> operator*(T t, const Coord4<T>& a)
 {
 	return a * t;
 }
 
 template<class T>
-Coord4<T> operator*(const Coord4<T>& a, const Coord4<T>& b)
+inline Coord4<T> operator*(const Coord4<T>& a, const Coord4<T>& b)
 {
 	return {
 		a.x * b.x,a.y * b.y,a.z * b.z,a.w * b.w
-	}
+	};
 }
 
 template<class T>
-Coord4<T> operator/(const Coord4<T>& a, T t)
+inline Coord4<T> operator/(const Coord4<T>& a, T t)
 {
 	return {
 		a.x / t,a.y / t,a.z / t,a.w / t
-	}
+	};
 }
 
 template<class T>
-Coord4<T> operator/(const Coord4<T>& a, const Coord4<T>& b)
+inline Coord4<T> operator/(const Coord4<T>& a, const Coord4<T>& b)
 {
 	return {
 		a.x / b.x,a.y / b.y,a.z / b.z,a.w / b.w
-	}
+	};
 }
 
 using Int4 = Coord4<int>;
