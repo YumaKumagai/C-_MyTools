@@ -142,6 +142,8 @@
     <ClCompile Include="Counter.cpp" />
     <ClCompile Include="Funcs.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Matrix4.cpp" />
+    <ClCompile Include="Stopwatch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Coord2.h" />
@@ -149,6 +151,8 @@
     <ClInclude Include="Coord4.h" />
     <ClInclude Include="Counter.h" />
     <ClInclude Include="Funcs.h" />
+    <ClInclude Include="Matrix4.h" />
+    <ClInclude Include="Stopwatch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

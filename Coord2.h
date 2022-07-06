@@ -20,6 +20,11 @@ public:
 		return { xy,xy };
 	}
 
+	static Coord2<double> Unit(double radian)
+	{
+		return { cos(radian),sin(radian) };
+	}
+
 	template<class U>Coord2<U> Cast()const
 	{
 		return { static_cast<U>(x),static_cast<U>(y) };
