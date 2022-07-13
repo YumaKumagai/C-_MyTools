@@ -1,5 +1,5 @@
 #include "DxLib.h"
-#include "Coord2.h"
+#include "./MyTools/Coord2.h"
 
 void func(const int(&array)[4][4])
 {

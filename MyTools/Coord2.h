@@ -5,14 +5,13 @@
 template<class T>class Coord2
 {
 public:
+	// メンバ変数
 	T x;
 	T y;
 
-public:
+	// メソッド
 	Coord2() :x(0), y(0) {}
-
 	Coord2(T x, T y) :x(x), y(y) {}
-
 	Coord2(const Coord2& c2) :x(c2.x), y(c2.y) {}
 
 	static Coord2 Square(T xy)
@@ -29,6 +28,8 @@ public:
 	{
 		return { static_cast<U>(x),static_cast<U>(y) };
 	}
+
+#pragma region 単項演算子・代入演算子オーバーロード
 
 	Coord2 operator+()const
 	{
@@ -76,6 +77,8 @@ public:
 		return *this;
 	}
 
+#pragma endregion
+
 	double Length()const
 	{
 		return sqrt(pow(x, 2) + pow(y, 2));
@@ -111,6 +114,8 @@ public:
 	}
 
 };
+
+#pragma region 二項演算子オーバーロード
 
 template<class T>
 inline Coord2<T> operator+(const Coord2<T>& a, const Coord2<T>& b)
@@ -153,6 +158,8 @@ inline Coord2<T> operator/(const Coord2<T>& a, const Coord2<T>& b)
 {
 	return { a.x / b.x,a.y / b.y };
 }
+
+#pragma endregion
 
 using Int2 = Coord2<int>;
 using Float2 = Coord2<float>;

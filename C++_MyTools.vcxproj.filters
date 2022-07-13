@@ -18,39 +18,39 @@
     <ClCompile Include="main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Counter.cpp">
+    <ClCompile Include="MyTools\Counter.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Funcs.cpp">
+    <ClCompile Include="MyTools\Funcs.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Stopwatch.cpp">
+    <ClCompile Include="MyTools\Matrix4.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Matrix4.cpp">
+    <ClCompile Include="MyTools\Stopwatch.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Coord2.h">
+    <ClInclude Include="MyTools\Coord2.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Coord3.h">
+    <ClInclude Include="MyTools\Coord3.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Coord4.h">
+    <ClInclude Include="MyTools\Coord4.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Counter.h">
+    <ClInclude Include="MyTools\Funcs.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Funcs.h">
+    <ClInclude Include="MyTools\Matrix4.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Stopwatch.h">
+    <ClInclude Include="MyTools\Stopwatch.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Matrix4.h">
+    <ClInclude Include="MyTools\Counter.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>

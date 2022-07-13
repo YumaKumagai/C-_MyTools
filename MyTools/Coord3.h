@@ -5,21 +5,22 @@
 template<class T>class Coord3
 {
 public:
+// メンバ変数
 	T x;
 	T y;
 	T z;
 
-public:
+// メソッド
 	Coord3() :x(0), y(0), z(0) {}
-
 	Coord3(T x, T y, T z) :x(x), y(y), z(z) {}
-
 	Coord3(const Coord3& co3) :x(co3.x), y(co3.y), z(co3.z) {}
 
 	template<class U>Coord3<U> Cast()const
 	{
 		return { static_cast<U>(x),static_cast<U>(y),static_cast<U>(z) };
 	}
+
+#pragma region 単項演算子・代入演算子オーバーロード
 
 	Coord3 operator+()const
 	{
@@ -67,6 +68,8 @@ public:
 		return *this;
 	}
 
+#pragma endregion
+
 	double Length()const
 	{
 		return sqrt(pow(x, 2) + pow(y, 2) + pow(z, 2));
@@ -92,6 +95,8 @@ public:
 	}
 
 };
+
+#pragma region 二項演算子オーバーロード
 
 template<class T>
 inline Coord3<T> operator+(const Coord3<T>& a, const Coord3<T>& b)
@@ -134,6 +139,8 @@ inline Coord3<T> operator/(const Coord3<T>& a, const Coord3<T>& b)
 {
 	return { a.x / b.x,a.y / b.y,a.z / b.z };
 }
+
+#pragma endregion
 
 using Int3 = Coord3<int>;
 using Float3 = Coord3<float>;

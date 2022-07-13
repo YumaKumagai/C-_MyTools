@@ -139,20 +139,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Counter.cpp" />
-    <ClCompile Include="Funcs.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Matrix4.cpp" />
-    <ClCompile Include="Stopwatch.cpp" />
+    <ClCompile Include="MyTools\Counter.cpp" />
+    <ClCompile Include="MyTools\Funcs.cpp" />
+    <ClCompile Include="MyTools\Matrix4.cpp" />
+    <ClCompile Include="MyTools\Stopwatch.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Coord2.h" />
-    <ClInclude Include="Coord3.h" />
-    <ClInclude Include="Coord4.h" />
-    <ClInclude Include="Counter.h" />
-    <ClInclude Include="Funcs.h" />
-    <ClInclude Include="Matrix4.h" />
-    <ClInclude Include="Stopwatch.h" />
+    <ClInclude Include="MyTools\Coord2.h" />
+    <ClInclude Include="MyTools\Coord3.h" />
+    <ClInclude Include="MyTools\Coord4.h" />
+    <ClInclude Include="MyTools\Counter.h" />
+    <ClInclude Include="MyTools\Funcs.h" />
+    <ClInclude Include="MyTools\Matrix4.h" />
+    <ClInclude Include="MyTools\Stopwatch.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

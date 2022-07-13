@@ -5,15 +5,15 @@
 template<class T>class Coord4
 {
 public:
+	// メンバ変数
 	T x;
 	T y;
 	T z;
 	T w;
 
-public:
+// メソッド
 	Coord4()
 		:x(0), y(0), z(0), w(0) {}
-
 	Coord4(T x, T y, T z, T w)
 		:x(x), y(y), z(z), w(w) {}
 
@@ -24,6 +24,8 @@ public:
 			static_cast<U>(z),static_cast<U>(w)
 		};
 	}
+
+#pragma region 単項演算子・代入演算子オーバーロード
 
 	Coord4 operator+()const
 	{
@@ -73,7 +75,11 @@ public:
 		return *this;
 	}
 
+#pragma endregion
+
 };
+
+#pragma region 二項演算子オーバーロード
 
 template<class T>
 inline Coord4<T> operator+(const Coord4<T>& a, const Coord4<T>& b)
@@ -126,6 +132,8 @@ inline Coord4<T> operator/(const Coord4<T>& a, const Coord4<T>& b)
 		a.x / b.x,a.y / b.y,a.z / b.z,a.w / b.w
 	};
 }
+
+#pragma endregion
 
 using Int4 = Coord4<int>;
 using Float4 = Coord4<float>;
